@@ -1,0 +1,6 @@
+Command exited with code 0.
+
+Command output:
+PIL is installed
+imageio NOT installed
+cv2 NOT installed

@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Saved three.min.js, size: 603445

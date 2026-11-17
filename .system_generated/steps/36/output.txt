@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+CFG 2 cols, 6 cards -> Paths: 2 {"columns":[["B","R","B"],["R","R","B"]],"slot":null} [ 'C1 -> C1 -> C1 -> C2 -> Slot', 'C1 -> C1 -> C2 -> Slot' ]
+CFG 2 cols, 9 cards -> Paths: 2 {"columns":[["B","B","Y","B"],["R","R","Y","R","Y"]],"slot":null} [
+  'C1 -> C1 -> Slot -> C2 -> C2 -> C1 -> C2 -> Slot',
+  'C1 -> C1 -> Slot -> C2 -> C2 -> C2 -> Slot'
+]

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Card Sort Concept Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      background: #06180e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 12px;
+    }
+    /* Mobile Portrait Felt Container */
+    #game-frame {
+      position: relative;
+      width: 360px;
+      min-height: 580px;
+      border-radius: 28px;
+      border: 4px solid #082313;
+      padding: 16px;
+      background: radial-gradient(circle at 50% 25%, #196f3d 0%, #114b29 70%, #0a331c 100%);
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5), 0 20px 45px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Top Bar Controls */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px 6px 12px 6px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+    .icon-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.1s, opacity 0.2s;
+    }
+    .icon-btn:active {
+      transform: scale(0.92);
+    }
+    .icon-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    .next-btn {
+      background: #eab308;
+      border-color: #fef08a;
+      color: #000000;
+      font-weight: bold;
+    }
+    .level-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      transition: all 0.25s ease;
+    }
+    .dot.active {
+      background: #facc15;
+      transform: scale(1.3);
+      box-shadow: 0 0 8px rgba(250, 204, 21, 0.6);
+    }
+    /* Tableau Columns Layout */
+    #columns-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 6px;
+      min-height: 320px;
+    }
+    .col-tap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 72px;
+      cursor: pointer;
+    }
+    .col-tap:hover .bottom-card {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+    /* Card & Placeholder Geometry */
+    .card-placeholder {
+      position: relative;
+      width: 72px;
+      height: 96px;
+      border-radius: 8px;
+      border: 2px dashed rgba(255, 255, 255, 0.28);
+      background: rgba(0, 0, 0, 0.16);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .color-card {
+      position: absolute;
+      width: 72px;
+      height: 96px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.38);
+      transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.3, 1), box-shadow 0.18s ease;
+      cursor: pointer;
+    }
+    .slot-card:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+    /* Bottom Slot Area */
+    .slot-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 8px;
+    }
+    /* Animations */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-5px); }
+      40% { transform: translateX(5px); }
+      60% { transform: translateX(-3px); }
+      80% { transform: translateX(3px); }
+    }
+    .shake-anim {
+      animation: shake 0.26s ease-in-out;
+    }
+    @keyframes popClear {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.8; }
+      100% { transform: scale(0.7); opacity: 0; }
+    }
+    .clearing-anim {
+      animation: popClear 0.24s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mobile Portrait Container -->
+  <div id="game-frame">
+
+    <!-- Top Bar Controls -->
+    <div class="top-bar">
+      <div class="btn-group">
+        <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="icon-btn" onclick="resetLevel()" title="Reset">⟳</button>
+      </div>
+
+      <div id="level-dots" class="level-dots">
+        <!-- Rendered by JS -->
+      </div>
+
+      <button class="icon-btn next-btn" onclick="nextLevel()" title="Next Level">➔</button>
+    </div>
+
+    <!-- 3 Tableau Columns (Overlapping vertical cards) -->
+    <div id="columns-row">
+      <!-- Columns rendered via JS -->
+    </div>
+
+    <!-- Single Holding Slot (Directly below Column 2) -->
+    <div class="slot-area">
+      <div id="holding-slot-box" class="card-placeholder" onclick="onSlotClick()">
+        <!-- Slot card rendered via JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Pure vibrant minimalist colors (Red, Amber, Blue, Purple)
+    const COLORS = {
+      R: { hex: '#ef4444', border: '#b91c1c' }, // Đỏ
+      Y: { hex: '#f59e0b', border: '#b45309' }, // Vàng
+      B: { hex: '#3b82f6', border: '#1d4ed8' }, // Xanh
+      P: { hex: '#a855f7', border: '#7e22ce' }  // Tím
+    };
+
+    const LEVELS = [
+      // Level 1: DỄ (2 màu, 6 lá, làm quen)
+      {
+        targetCount: 3,
+        columns: [
+          ['B', 'R'],
+          ['R', 'B'],
+          ['R', 'B']
+        ]
+      },
+      // Level 2: VỪA (3 màu, 9 lá)
+      {
+        targetCount: 3,
+        columns: [
+          ['R', 'B', 'Y'],
+          ['B', 'R', 'B'],
+          ['Y', 'Y', 'R']
+        ]
+      },
+      // Level 3: KHÓ (4 màu, 12 lá sâu 4 tầng, bẫy 0 nước đi)
+      {
+        targetCount: 3,
+        columns: [
+          ['Y', 'P', 'Y', 'B'],
+          ['B', 'B', 'R', 'P'],
+          ['P', 'R', 'Y', 'R']
+        ]
+      }
+    ];
+
+    let currentLevelIdx = 0;
+    let columns = [];
+    let holdingSlot = null;
+    let history = [];
+    let isAnimating = false;
+
+    function cloneState() {
+      return {
+        columns: columns.map(c => [...c]),
+        holdingSlot
+      };
+    }
+
+    function initLevel(idx) {
+      currentLevelIdx = idx;
+      const lvl = LEVELS[idx];
+      columns = lvl.columns.map(c => [...c]);
+      holdingSlot = null;
+      history = [];
+      isAnimating = false;
+
+      // Update dots
+      const dotsContainer = document.getElementById('level-dots');
+      dotsContainer.innerHTML = LEVELS.map((_, i) => 
+        `<span class="dot ${i === currentLevelIdx ? 'active' : ''}"></span>`
+      ).join('');
+
+      render();
+    }
+
+    function getBottomGroupCount(col) {
+      if (col.length === 0) return 0;
+      const bottomColor = col[col.length - 1];
+      let count = 0;
+      for (let i = col.length - 1; i >= 0; i--) {
+        if (col[i] === bottomColor) count++;
+        else break;
+      }
+      return count;
+    }
+
+    function isPureFullColumn(col) {
+      const target = LEVELS[currentLevelIdx].targetCount;
+      if (col.length !== target) return false;
+      return getBottomGroupCount(col) === target;
+    }
+
+    function findTargetColumnForColumnClick(color, startColIdx) {
+      const n = columns.length;
+      for (let step = 1; step < n; step++) {
+        const idx = (startColIdx + step) % n;
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx };
+        }
+      }
+      for (let step = 1; step < n; step++) {
+        const idx = (startColIdx + step) % n;
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx };
+        }
+      }
+      return null;
+    }
+
+    function findTargetColumnForSlot(color) {
+      for (let idx = 0; idx < columns.length; idx++) {
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx };
+        }
+      }
+      for (let idx = 0; idx < columns.length; idx++) {
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx };
+        }
+      }
+      return null;
+    }
+
+    function countValidMoves() {
+      let valid = 0;
+      for (let cIdx = 0; cIdx < columns.length; cIdx++) {
+        const col = columns[cIdx];
+        if (col.length === 0) continue;
+        const color = col[col.length - 1];
+        if (findTargetColumnForColumnClick(color, cIdx) || !holdingSlot) {
+          valid++;
+        }
+      }
+      if (holdingSlot && findTargetColumnForSlot(holdingSlot)) {
+        valid++;
+      }
+      return valid;
+    }
+
+    function triggerShake(el) {
+      if (!el) return;
+      el.classList.remove('shake-anim');
+      void el.offsetWidth;
+      el.classList.add('shake-anim');
+    }
+
+    function render() {
+      const validMoves = countValidMoves();
+      const totalRemaining = columns.reduce((acc, c) => acc + c.length, 0) + (holdingSlot ? 1 : 0);
+
+      // Frame glow indicator: Green for Win, Red for 0-Move Game Over, Default dark green
+      const frame = document.getElementById('game-frame');
+      if (totalRemaining === 0) {
+        frame.style.borderColor = '#10b981';
+        frame.style.boxShadow = '0 0 25px rgba(16, 185, 129, 0.45), inset 0 0 30px rgba(0,0,0,0.5)';
+      } else if (validMoves === 0) {
+        frame.style.borderColor = '#ef4444';
+        frame.style.boxShadow = '0 0 25px rgba(239, 68, 68, 0.55), inset 0 0 30px rgba(0,0,0,0.5)';
+      } else {
+        frame.style.borderColor = '#082313';
+        frame.style.boxShadow = 'inset 0 0 30px rgba(0, 0, 0, 0.5), 0 20px 45px rgba(0, 0, 0, 0.6)';
+      }
+
+      // Render 3 Tableau Columns (Overlapping vertical cards)
+      const container = document.getElementById('columns-row');
+      container.innerHTML = '';
+      const VERTICAL_OVERLAP = 28;
+
+      columns.forEach((col, cIdx) => {
+        const colWrapper = document.createElement('div');
+        colWrapper.id = `col-box-${cIdx}`;
+        colWrapper.className = 'col-tap';
+        colWrapper.onclick = () => onColumnClick(cIdx);
+
+        const colBase = document.createElement('div');
+        colBase.className = 'card-placeholder';
+
+        const groupCount = getBottomGroupCount(col);
+
+        if (col.length > 0) {
+          const calculatedHeight = 96 + (col.length - 1) * VERTICAL_OVERLAP;
+          colBase.style.height = `${calculatedHeight}px`;
+
+          col.forEach((colorKey, cardIdx) => {
+            const isBottomGroup = cardIdx >= col.length - groupCount;
+            const c = COLORS[colorKey];
+
+            const card = document.createElement('div');
+            card.className = `color-card ${isBottomGroup ? 'bottom-card' : ''}`;
+            card.style.top = `${cardIdx * VERTICAL_OVERLAP}px`;
+            card.style.zIndex = cardIdx + 1;
+            card.style.backgroundColor = c.hex;
+            card.style.borderColor = c.border;
+
+            if (isBottomGroup) {
+              card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.45)';
+            } else {
+              card.style.filter = 'brightness(0.92)';
+            }
+
+            colBase.appendChild(card);
+          });
+        }
+
+        colWrapper.appendChild(colBase);
+        container.appendChild(colWrapper);
+      });
+
+      // Render Single Holding Slot (Directly below Column 2)
+      const slotBox = document.getElementById('holding-slot-box');
+      slotBox.innerHTML = '';
+      if (holdingSlot) {
+        const c = COLORS[holdingSlot];
+        const card = document.createElement('div');
+        card.className = 'color-card slot-card';
+        card.style.left = '0';
+        card.style.top = '0';
+        card.style.boxShadow = '0 8px 18px rgba(0, 0, 0, 0.5)';
+        card.style.backgroundColor = c.hex;
+        card.style.borderColor = c.border;
+        slotBox.appendChild(card);
+      }
+
+      document.getElementById('btn-undo').disabled = history.length === 0 || isAnimating;
+    }
+
+    async function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    async function checkAndClearPureColumn(colIdx) {
+      const col = columns[colIdx];
+      const target = LEVELS[currentLevelIdx].targetCount;
+      if (isPureFullColumn(col)) {
+        render();
+        const colBase = document.getElementById(`col-box-${colIdx}`)?.querySelector('.card-placeholder');
+        if (colBase) colBase.classList.add('clearing-anim');
+        await sleep(220);
+        col.splice(0, col.length);
+        render();
+      }
+    }
+
+    async function onColumnClick(colIdx) {
+      if (isAnimating) return;
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const match = findTargetColumnForColumnClick(color, colIdx);
+
+      // Move group to matching column or empty column
+      if (match) {
+        history.push(cloneState());
+        isAnimating = true;
+        col.splice(col.length - count, count);
+        for (let i = 0; i < count; i++) {
+          columns[match.targetIdx].push(color);
+        }
+        await checkAndClearPureColumn(match.targetIdx);
+        isAnimating = false;
+        render();
+        return;
+      }
+
+      // No column target -> Move 1 card to holding slot
+      if (!holdingSlot) {
+        history.push(cloneState());
+        col.pop();
+        holdingSlot = color;
+        render();
+        return;
+      }
+
+      // Invalid move: shake column
+      triggerShake(document.getElementById(`col-box-${colIdx}`));
+    }
+
+    async function onSlotClick() {
+      if (isAnimating || !holdingSlot) return;
+
+      const color = holdingSlot;
+      const match = findTargetColumnForSlot(color);
+      if (!match) {
+        triggerShake(document.getElementById('holding-slot-box'));
+        return;
+      }
+
+      history.push(cloneState());
+      isAnimating = true;
+      holdingSlot = null;
+      columns[match.targetIdx].push(color);
+      await checkAndClearPureColumn(match.targetIdx);
+      isAnimating = false;
+      render();
+    }
+
+    function undoMove() {
+      if (history.length === 0 || isAnimating) return;
+      const prev = history.pop();
+      columns = prev.columns;
+      holdingSlot = prev.holdingSlot;
+      render();
+    }
+
+    function resetLevel() {
+      if (isAnimating) return;
+      initLevel(currentLevelIdx);
+    }
+
+    function nextLevel() {
+      if (isAnimating) return;
+      initLevel((currentLevelIdx + 1) % LEVELS.length);
+    }
+
+    initLevel(0);
+  </script>
+</body>
+</html>

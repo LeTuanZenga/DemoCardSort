@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Grid count: 20 Widths: {8}

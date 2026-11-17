@@ -1,0 +1,14 @@
+Command exited with code 0.
+
+Command output:
+INIT: {"columns":[["Y","P","Y","B"],["B","B","R","P"],["P","R","Y","R"]],"slot":null}
+Col 2 -> Slot (1 P) --> [["Y","P","Y","B"],["B","B","R"],["P","R","Y","R"]] Slot: P
+Col 2 -> Col 3 (1 R) --> [["Y","P","Y","B"],["B","B"],["P","R","Y","R","R"]] Slot: P
+Col 1 -> Col 2 (1 B) [CLEARED] --> [["Y","P","Y"],[],["P","R","Y","R","R"]] Slot: P
+Col 3 -> Col 2 (2 R) --> [["Y","P","Y"],["R","R"],["P","R","Y"]] Slot: P
+Col 3 -> Col 1 (1 Y) --> [["Y","P","Y","Y"],["R","R"],["P","R"]] Slot: P
+Col 3 -> Col 2 (1 R) [CLEARED] --> [["Y","P","Y","Y"],[],["P"]] Slot: P
+Col 1 -> Col 2 (2 Y) --> [["Y","P"],["Y","Y"],["P"]] Slot: P
+Col 1 -> Col 3 (1 P) --> [["Y"],["Y","Y"],["P","P"]] Slot: P
+Col 1 -> Col 2 (1 Y) [CLEARED] --> [[],[],["P","P"]] Slot: P
+Slot -> Col 3 (1 P) [CLEARED] --> [[],[],[]] Slot: null

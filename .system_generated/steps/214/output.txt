@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+SUCCESS: C:\Users\Admin\.gemini\antigravity\brain\0ca39d47-bf1d-4d04-97dc-9c2fe64cb8c8\demo_4_slots_deck_collector.png 25014

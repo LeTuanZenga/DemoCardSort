@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Rows: 20 Cols: 8. Sword layout valid!

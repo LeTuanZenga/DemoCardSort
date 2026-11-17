@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+Python 3.13.14
+
+'ffmpeg' is not recognized as an internal or external command,
+operable program or batch file.
+no ffmpeg

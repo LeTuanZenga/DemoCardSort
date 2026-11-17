@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cách 1: 6 Cột Lớn + Lá Đáy Ghi Số (k/Target)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      background: #06170d;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 8px;
+    }
+    #game-frame {
+      position: relative;
+      width: 420px;
+      max-width: 100%;
+      background: radial-gradient(circle at 50% 20%, #176537 0%, #114b29 70%, #0a331c 100%);
+      border: 4px solid #082313;
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5), 0 18px 40px rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .title-area h1 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fef08a;
+    }
+    .title-area p {
+      font-size: 12px;
+      color: #86efac;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-pill {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fef9c3;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .icon-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    /* 6 Wide Columns Area */
+    #tableau-6cols {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 2px;
+      min-height: 320px;
+    }
+    .col-wrap {
+      position: relative;
+      width: 58px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .col-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #86efac;
+      margin-bottom: 4px;
+    }
+    .col-stack {
+      position: relative;
+      width: 58px;
+      min-height: 68px;
+      border-radius: 8px;
+      border: 1.5px dashed rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.16);
+    }
+    /* Upper compressed pixel cards */
+    .pixel-strip-card {
+      position: absolute;
+      left: 0;
+      width: 58px;
+      height: 24px;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+      transition: top 0.15s ease;
+    }
+    /* Bottom separated Touch Pad Card */
+    .bottom-pad-card {
+      position: absolute;
+      left: 0;
+      width: 58px;
+      height: 66px;
+      border-radius: 8px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.14s ease, top 0.15s ease;
+    }
+    .col-wrap:hover .bottom-pad-card {
+      transform: translateY(-4px) scale(1.03);
+    }
+    .counter-badge {
+      background: #091e11;
+      border: 1px solid #facc15;
+      color: #fef08a;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 7px;
+      margin-bottom: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    .progress-track {
+      width: 44px;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #4ade80;
+      transition: width 0.2s ease;
+    }
+    /* Single Holding Slot */
+    .slot-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .slot-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #bbf7d0;
+      margin-bottom: 6px;
+    }
+    #slot-box {
+      width: 175px;
+      height: 58px;
+      border-radius: 10px;
+      border: 2px dashed rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+    #slot-box:hover {
+      transform: translateY(-2px);
+      border-color: #facc15;
+    }
+    .slot-filled {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      border: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    .shake-anim {
+      animation: shake 0.24s ease-in-out;
+    }
+    @keyframes popClear {
+      0% { transform: scale(1); opacity: 1; }
+      40% { transform: scale(1.15); opacity: 0.9; }
+      100% { transform: scale(0.5); opacity: 0; }
+    }
+    .clearing-anim {
+      animation: popClear 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="game-frame">
+    <div class="header-bar">
+      <div class="title-area">
+        <h1>Cách 1: 6 Cột Lớn + Lá Đáy Ghi Số</h1>
+        <p id="status-msg">Chạm cột để ghép cùng màu · Đủ k/Target là nổ ngay!</p>
+      </div>
+      <div class="controls">
+        <span id="remain-badge" class="stat-pill">Còn: 96</span>
+        <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="icon-btn" onclick="resetGame()" title="Chơi lại">⟳</button>
+      </div>
+    </div>
+
+    <!-- 6 Wide Columns -->
+    <div id="tableau-6cols"></div>
+
+    <!-- Single Holding Slot -->
+    <div class="slot-area">
+      <div class="slot-title">📥 1 SLOT CHỜ DUY NHẤT (Chứa mọi lá cùng màu)</div>
+      <div id="slot-box" onclick="onSlotClick()"></div>
+    </div>
+  </div>
+
+  <script>
+    const MAX_BATCH = 8;
+
+    const COLORS = {
+      B: { name: 'Xanh Đêm', fill: '#0f172a', border: '#334155', text: '#ffffff' },
+      R: { name: 'Đỏ', fill: '#ef4444', border: '#b91c1c', text: '#ffffff' },
+      W: { name: 'Trắng', fill: '#f8fafc', border: '#94a3b8', text: '#0f172a' },
+      S: { name: 'Màu Da', fill: '#fed7aa', border: '#d97706', text: '#7c2d12' },
+      D: { name: 'Mắt Đen', fill: '#18181b', border: '#52525b', text: '#ffffff' },
+      G: { name: 'Xanh Lá', fill: '#22c55e', border: '#15803d', text: '#052e16' },
+      Y: { name: 'Vàng', fill: '#eab308', border: '#a16207', text: '#422006' }
+    };
+
+    // Symmetric 6x16 Mushroom Grid (96 cards)
+    const GRID_6X16 = [
+      'BBRRBB',
+      'BRRRRB',
+      'RRWWRR',
+      'RRWWRR',
+      'WRRRRW',
+      'WRRRRW',
+      'RRRRRR',
+      'BSSSSB',
+      'BDSSDB',
+      'BDSSDB',
+      'BSSSSB',
+      'BGGGGB',
+      'GGGGGG',
+      'GGGGGG',
+      'GGYYGG',
+      'GYGGYG'
+    ];
+
+    let columns = [];
+    let holdingSlot = null; // { color, count } or null
+    let history = [];
+    let isAnimating = false;
+
+    function buildInitialColumns() {
+      const cols = [[], [], [], [], [], []];
+      for (let r = 0; r < GRID_6X16.length; r++) {
+        for (let c = 0; c < 6; c++) {
+          cols[c].push(GRID_6X16[r][c]);
+        }
+      }
+      return cols;
+    }
+
+    function cloneState() {
+      return {
+        columns: columns.map(c => [...c]),
+        holdingSlot: holdingSlot ? { ...holdingSlot } : null
+      };
+    }
+
+    function setStatus(msg) {
+      document.getElementById('status-msg').textContent = msg;
+    }
+
+    function getBottomGroupCount(col) {
+      if (col.length === 0) return 0;
+      const color = col[col.length - 1];
+      let k = 0;
+      for (let i = col.length - 1; i >= 0; i--) {
+        if (col[i] === color) k++;
+        else break;
+      }
+      return k;
+    }
+
+    // Count total remaining cards of `color` across entire board + slot
+    function getTotalRemainingOfColor(color) {
+      let total = holdingSlot && holdingSlot.color === color ? holdingSlot.count : 0;
+      columns.forEach(col => {
+        col.forEach(c => {
+          if (c === color) total++;
+        });
+      });
+      return total;
+    }
+
+    // Dynamic Target Formula: min(8, total remaining of that color)
+    function getTargetForColor(color) {
+      const rem = getTotalRemainingOfColor(color);
+      return Math.min(MAX_BATCH, Math.max(1, rem));
+    }
+
+    function getStepY(upperCardsCount) {
+      if (upperCardsCount <= 6) return 18;
+      if (upperCardsCount <= 12) return 14;
+      return 11;
+    }
+
+    function findTargetColForColClick(color, startColIdx) {
+      const n = columns.length;
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function findTargetColForSlot(color) {
+      for (let idx = 0; idx < columns.length; idx++) {
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      for (let idx = 0; idx < columns.length; idx++) {
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function triggerShake(el) {
+      if (!el) return;
+      el.classList.remove('shake-anim');
+      void el.offsetWidth;
+      el.classList.add('shake-anim');
+    }
+
+    function render() {
+      const totalCards = columns.reduce((acc, c) => acc + c.length, 0) + (holdingSlot ? holdingSlot.count : 0);
+      document.getElementById('remain-badge').textContent = `Còn: ${totalCards}`;
+
+      const board = document.getElementById('tableau-6cols');
+      board.innerHTML = '';
+
+      columns.forEach((col, cIdx) => {
+        const wrap = document.createElement('div');
+        wrap.id = `col-wrap-${cIdx}`;
+        wrap.className = 'col-wrap';
+        wrap.onclick = () => onColumnClick(cIdx);
+
+        const lbl = document.createElement('div');
+        lbl.className = 'col-label';
+        lbl.textContent = `C${cIdx + 1}`;
+        wrap.appendChild(lbl);
+
+        const stack = document.createElement('div');
+        stack.className = 'col-stack';
+
+        if (col.length > 0) {
+          const bottomGroupCount = getBottomGroupCount(col);
+          const bottomColor = col[col.length - 1];
+          const target = getTargetForColor(bottomColor);
+
+          // Upper non-bottom-group cards rendered as pixel strips;
+          // Bottom group collapsed into 1 single separated Touch Pad card with counter k/Target!
+          const upperCount = col.length - bottomGroupCount;
+          const stepY = getStepY(upperCount);
+
+          for (let i = 0; i < upperCount; i++) {
+            const cKey = col[i];
+            const cInfo = COLORS[cKey];
+            const strip = document.createElement('div');
+            strip.className = 'pixel-strip-card';
+            strip.style.top = `${i * stepY}px`;
+            strip.style.zIndex = i + 1;
+            strip.style.backgroundColor = cInfo.fill;
+            strip.style.borderColor = cInfo.border;
+            stack.appendChild(strip);
+          }
+
+          // Separated Bottom Touch Pad Card representing the entire bottom group!
+          const padTop = upperCount > 0 ? (upperCount * stepY + 8) : 0;
+          const cInfo = COLORS[bottomColor];
+          const pad = document.createElement('div');
+          pad.id = `pad-col-${cIdx}`;
+          pad.className = 'bottom-pad-card';
+          pad.style.top = `${padTop}px`;
+          pad.style.zIndex = upperCount + 2;
+          pad.style.backgroundColor = cInfo.fill;
+
+          const pct = Math.min(100, Math.round((bottomGroupCount / target) * 100));
+          pad.innerHTML = `
+            <div class="counter-badge">${bottomGroupCount}/${target}</div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: ${pct}%"></div>
+            </div>
+          `;
+          stack.appendChild(pad);
+          stack.style.height = `${padTop + 68}px`;
+        }
+
+        wrap.appendChild(stack);
+        board.appendChild(wrap);
+      });
+
+      // Render Slot
+      const slotBox = document.getElementById('slot-box');
+      slotBox.innerHTML = '';
+      if (!holdingSlot || holdingSlot.count === 0) {
+        slotBox.innerHTML = `<span style="font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 700;">SLOT TRỐNG</span>`;
+      } else {
+        const cInfo = COLORS[holdingSlot.color];
+        const target = getTargetForColor(holdingSlot.color);
+        const filled = document.createElement('div');
+        filled.className = 'slot-filled';
+        filled.style.backgroundColor = cInfo.fill;
+        filled.style.color = cInfo.text;
+        filled.innerHTML = `
+          <div>
+            <div style="font-size: 12px; font-weight: 800;">${cInfo.name}</div>
+            <div style="font-size: 12px; opacity: 0.85;">Chạm để đẩy lên</div>
+          </div>
+          <div class="counter-badge" style="margin-bottom: 0;">${holdingSlot.count}/${target}</div>
+        `;
+        slotBox.appendChild(filled);
+      }
+
+      document.getElementById('btn-undo').disabled = (history.length === 0 || isAnimating);
+    }
+
+    async function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    async function checkAndClearBatch(colIdx) {
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const target = getTargetForColor(color);
+
+      if (count >= target) {
+        render();
+        const padEl = document.getElementById(`pad-col-${colIdx}`);
+        if (padEl) padEl.classList.add('clearing-anim');
+        setStatus(`💥 Cột ${colIdx + 1} gom đủ ${count}/${target} lá ${COLORS[color].name} ➔ NỔ CLEAR!`);
+        await sleep(240);
+        col.splice(col.length - count, count);
+        render();
+
+        const totalLeft = columns.reduce((acc, c) => acc + c.length, 0) + (holdingSlot ? holdingSlot.count : 0);
+        if (totalLeft === 0) {
+          setStatus('🎉 CHIẾN THẮNG! Bạn đã phá đảo toàn bộ bức tranh Pixel!');
+        }
+      }
+    }
+
+    async function onColumnClick(colIdx) {
+      if (isAnimating) return;
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const match = findTargetColForColClick(color, colIdx);
+
+      if (match) {
+        history.push(cloneState());
+        isAnimating = true;
+        col.splice(col.length - count, count);
+        for (let i = 0; i < count; i++) {
+          columns[match.targetIdx].push(color);
+        }
+        setStatus(`✅ Ghép ${count} lá ${COLORS[color].name} từ C${colIdx + 1} ➔ C${match.targetIdx + 1}.`);
+        await checkAndClearBatch(match.targetIdx);
+        isAnimating = false;
+        render();
+        return;
+      }
+
+      // Push all `count` bottom cards into the Single Holding Slot if empty or same color
+      if (!holdingSlot || holdingSlot.color === color) {
+        history.push(cloneState());
+        col.splice(col.length - count, count);
+        if (!holdingSlot) {
+          holdingSlot = { color, count };
+        } else {
+          holdingSlot.count += count;
+        }
+        setStatus(`📥 Đưa ${count} lá ${COLORS[color].name} vào Slot chờ.`);
+        render();
+        return;
+      }
+
+      triggerShake(document.getElementById(`col-wrap-${colIdx}`));
+      setStatus(`⚠️ Slot đang giữ màu ${COLORS[holdingSlot.color].name}, không thể nhận màu khác!`);
+    }
+
+    async function onSlotClick() {
+      if (isAnimating || !holdingSlot || holdingSlot.count === 0) return;
+
+      const { color, count } = holdingSlot;
+      const match = findTargetColForSlot(color);
+      if (!match) {
+        triggerShake(document.getElementById('slot-box'));
+        setStatus(`⚠️ Chưa có cột nào trùng màu ${COLORS[color].name} hoặc cột trống!`);
+        return;
+      }
+
+      history.push(cloneState());
+      isAnimating = true;
+      holdingSlot = null;
+      for (let i = 0; i < count; i++) {
+        columns[match.targetIdx].push(color);
+      }
+      setStatus(`🔼 Đẩy ${count} lá ${COLORS[color].name} từ Slot lên C${match.targetIdx + 1}.`);
+      await checkAndClearBatch(match.targetIdx);
+      isAnimating = false;
+      render();
+    }
+
+    function undoMove() {
+      if (history.length === 0 || isAnimating) return;
+      const prev = history.pop();
+      columns = prev.columns;
+      holdingSlot = prev.holdingSlot;
+      setStatus('Đã quay lại 1 bước (Undo).');
+      render();
+    }
+
+    function resetGame() {
+      if (isAnimating) return;
+      columns = buildInitialColumns();
+      holdingSlot = null;
+      history = [];
+      isAnimating = false;
+      setStatus('Chạm cột để ghép cùng màu · Đủ k/Target là nổ ngay!');
+      render();
+    }
+
+    resetGame();
+  </script>
+</body>
+</html>

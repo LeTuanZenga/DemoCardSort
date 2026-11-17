@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Playable Pixel Art Card Sort (8x20 Mushroom)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      background: #06170d;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
+    #game-container {
+      position: relative;
+      width: 680px;
+      max-width: 100%;
+      background: radial-gradient(circle at 50% 20%, #176537 0%, #114b29 70%, #0a331c 100%);
+      border: 4px solid #082313;
+      border-radius: 24px;
+      padding: 14px 16px;
+      box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.5), 0 20px 45px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 720px;
+      transition: border-color 0.3s;
+    }
+    /* Header HUD */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .title-box h1 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fef08a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .title-box p {
+      font-size: 11px;
+      color: #86efac;
+      margin-top: 2px;
+    }
+    .btn-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hud-stat {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fef9c3;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .ctrl-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.1s, opacity 0.2s;
+    }
+    .ctrl-btn:active {
+      transform: scale(0.92);
+    }
+    .ctrl-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    /* Tableau 8 Columns */
+    #tableau-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 0;
+      min-height: 480px;
+    }
+    .col-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 76px;
+      margin: 0 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .col-header {
+      font-size: 10px;
+      font-weight: bold;
+      color: #86efac;
+      margin-bottom: 4px;
+    }
+    .col-base {
+      position: relative;
+      width: 100%;
+      height: 72px;
+      border-radius: 6px;
+      border: 1.5px dashed rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.14);
+      transition: height 0.18s ease;
+    }
+    /* Card Geometry */
+    .pixel-card {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 68px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      transition: top 0.15s ease, transform 0.12s ease, opacity 0.2s ease;
+      cursor: pointer;
+    }
+    .pixel-card::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      right: 4px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 1px;
+    }
+    .col-wrapper:hover .bottom-card {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.55);
+    }
+    /* Holding Slots Area */
+    .slots-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+    }
+    .slots-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #bbf7d0;
+      margin-bottom: 6px;
+    }
+    .slots-row {
+      display: flex;
+      gap: 12px;
+    }
+    .slot-box {
+      position: relative;
+      width: 72px;
+      height: 68px;
+      border-radius: 6px;
+      border: 2px dashed rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: bold;
+    }
+    .slot-card {
+      top: 0 !important;
+      left: 0 !important;
+      height: 100% !important;
+    }
+    .slot-card:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+    /* Animations */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-5px); }
+      40% { transform: translateX(5px); }
+      60% { transform: translateX(-3px); }
+      80% { transform: translateX(3px); }
+    }
+    .shake-anim {
+      animation: shake 0.24s ease-in-out;
+    }
+    @keyframes popClear {
+      0% { transform: scale(1); opacity: 1; }
+      40% { transform: scale(1.12); opacity: 0.9; }
+      100% { transform: scale(0.6); opacity: 0; }
+    }
+    .clearing-anim {
+      animation: popClear 0.22s ease-out forwards;
+    }
+    /* Rule footer */
+    .footer-bar {
+      font-size: 11px;
+      color: #86efac;
+      text-align: center;
+      padding-top: 10px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="game-container">
+    <!-- Header HUD -->
+    <div class="header-bar">
+      <div class="title-box">
+        <h1><span>🍄</span> Super Mushroom Pixel Card Sort (8×20)</h1>
+        <p>Solitaire Adaptive Fit · 160 quân bài 7 hệ màu · Bốc bài từ đáy để gỡ bức tranh!</p>
+      </div>
+
+      <div class="btn-group">
+        <span id="stat-cards" class="hud-stat">Bài: 160</span>
+        <button id="btn-undo" class="ctrl-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="ctrl-btn" onclick="resetGame()" title="Reset">⟳</button>
+      </div>
+    </div>
+
+    <!-- 8 Tableau Columns -->
+    <div id="tableau-row">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- Free Slots Area (3 slots) -->
+    <div class="slots-container">
+      <div class="slots-label">📥 FREE SLOTS (Nhận 1 quân đáy khi không có cột cùng màu)</div>
+      <div class="slots-row">
+        <div id="slot-0" class="slot-box" onclick="onSlotClick(0)">TRỐNG</div>
+        <div id="slot-1" class="slot-box" onclick="onSlotClick(1)">TRỐNG</div>
+        <div id="slot-2" class="slot-box" onclick="onSlotClick(2)">TRỐNG</div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      • Chạm cột: Bốc cụm cùng màu ở đáy sang Cột trùng màu hoặc Cột trống • Gom đủ màu thuần sẽ Clear nổ cột!
+    </div>
+  </div>
+
+  <script>
+    // 7 Solid Card Colors of the Mushroom Map
+    const COLORS = {
+      B: { name: 'Sky Navy', fill: '#0f172a', border: '#334155' },
+      R: { name: 'Red', fill: '#ef4444', border: '#b91c1c' },
+      W: { name: 'White', fill: '#f8fafc', border: '#cbd5e1' },
+      S: { name: 'Peach', fill: '#fed7aa', border: '#d97706' },
+      D: { name: 'Dark Eye', fill: '#18181b', border: '#09090b' },
+      G: { name: 'Green', fill: '#22c55e', border: '#15803d' },
+      Y: { name: 'Gold', fill: '#eab308', border: '#a16207' }
+    };
+
+    // 8x20 Super Mario Mushroom Pixel Map
+    const PIXEL_GRID_MUSHROOM = [
+      'BBBBBBBB',  // 0
+      'BBRRRRBB',  // 1
+      'BRRRRRRB',  // 2
+      'RRWWWWRR',  // 3
+      'RRWWWWRR',  // 4
+      'RWWWRRWR',  // 5
+      'RWWWRRWR',  // 6
+      'RRRRRRRR',  // 7
+      'RRRRRRRR',  // 8
+      'BRRRRRRB',  // 9
+      'BSSSSSSB',  // 10
+      'BSDSSDSS',  // 11
+      'BSDSSDSS',  // 12
+      'BSSSSSSB',  // 13
+      'BSSSSSSB',  // 14
+      'BGGGGGGB',  // 15
+      'GGGGGGGG',  // 16
+      'GGGGGGGG',  // 17
+      'BYYYYYYB',  // 18
+      'YYYYYYYY'   // 19 (Movable bottom row initially)
+    ];
+
+    let columns = [];
+    let holdingSlots = [null, null, null];
+    let history = [];
+    let isAnimating = false;
+
+    // Convert pixel grid (20 rows x 8 cols) into 8 columns
+    function initColumnsFromGrid() {
+      const cols = [[], [], [], [], [], [], [], []];
+      for (let r = 0; r < 20; r++) {
+        for (let c = 0; c < 8; c++) {
+          cols[c].push(PIXEL_GRID_MUSHROOM[r][c]);
+        }
+      }
+      return cols;
+    }
+
+    function cloneState() {
+      return {
+        columns: columns.map(c => [...c]),
+        holdingSlots: [...holdingSlots]
+      };
+    }
+
+    function resetGame() {
+      if (isAnimating) return;
+      columns = initColumnsFromGrid();
+      holdingSlots = [null, null, null];
+      history = [];
+      isAnimating = false;
+      render();
+    }
+
+    function getBottomGroupCount(col) {
+      if (col.length === 0) return 0;
+      const bottomColor = col[col.length - 1];
+      let count = 0;
+      for (let i = col.length - 1; i >= 0; i--) {
+        if (col[i] === bottomColor) count++;
+        else break;
+      }
+      return count;
+    }
+
+    // Adaptive Solitaire Spacing: Tự động nén khoảng cách khi cột có nhiều lá!
+    function getVerticalStep(colLen) {
+      if (colLen <= 6) return 28;
+      if (colLen <= 10) return 24;
+      if (colLen <= 14) return 21;
+      return 18; // When tall (15-20 cards), compress snugly to 18px!
+    }
+
+    function findTargetColumnForColumn(color, startColIdx) {
+      const n = columns.length;
+      // Priority 1: Another column with matching bottom color
+      for (let step = 1; step < n; step++) {
+        const idx = (startColIdx + step) % n;
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      // Priority 2: Empty column
+      for (let step = 1; step < n; step++) {
+        const idx = (startColIdx + step) % n;
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function findTargetColumnForSlot(color) {
+      // Priority 1: Column with matching bottom color
+      for (let idx = 0; idx < columns.length; idx++) {
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      // Priority 2: Empty column
+      for (let idx = 0; idx < columns.length; idx++) {
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function triggerShake(el) {
+      if (!el) return;
+      el.classList.remove('shake-anim');
+      void el.offsetWidth;
+      el.classList.add('shake-anim');
+    }
+
+    function render() {
+      const totalRemaining = columns.reduce((acc, c) => acc + c.length, 0) + holdingSlots.filter(s => s !== null).length;
+      document.getElementById('stat-cards').textContent = `Bài: ${totalRemaining}`;
+
+      // Render 8 Tableau Columns with Adaptive Solitaire Fit
+      const tableauContainer = document.getElementById('tableau-row');
+      tableauContainer.innerHTML = '';
+
+      columns.forEach((col, cIdx) => {
+        const colWrapper = document.createElement('div');
+        colWrapper.id = `col-wrap-${cIdx}`;
+        colWrapper.className = 'col-wrapper';
+        colWrapper.onclick = () => onColumnClick(cIdx);
+
+        const header = document.createElement('div');
+        header.className = 'col-header';
+        header.textContent = `C${cIdx + 1} (${col.length})`;
+        colWrapper.appendChild(header);
+
+        const colBase = document.createElement('div');
+        colBase.className = 'col-base';
+
+        const stepY = getVerticalStep(col.length);
+        const groupCount = getBottomGroupCount(col);
+
+        if (col.length > 0) {
+          const calculatedHeight = 68 + (col.length - 1) * stepY;
+          colBase.style.height = `${calculatedHeight}px`;
+
+          col.forEach((colorKey, cardIdx) => {
+            const isBottomGroup = cardIdx >= col.length - groupCount;
+            const c = COLORS[colorKey];
+
+            const card = document.createElement('div');
+            card.className = `pixel-card ${isBottomGroup ? 'bottom-card' : ''}`;
+            card.style.top = `${cardIdx * stepY}px`;
+            card.style.zIndex = cardIdx + 1;
+            card.style.backgroundColor = c.fill;
+            card.style.borderColor = c.border;
+
+            if (isBottomGroup) {
+              card.style.boxShadow = '0 3px 8px rgba(0, 0, 0, 0.45)';
+            } else {
+              card.style.filter = 'brightness(0.92)';
+            }
+
+            colBase.appendChild(card);
+          });
+        }
+
+        colWrapper.appendChild(colBase);
+        tableauContainer.appendChild(colWrapper);
+      });
+
+      // Render 3 Free Holding Slots
+      holdingSlots.forEach((slotColor, sIdx) => {
+        const slotEl = document.getElementById(`slot-${sIdx}`);
+        slotEl.innerHTML = '';
+        if (slotColor === null) {
+          slotEl.textContent = 'TRỐNG';
+          slotEl.style.border = '2px dashed rgba(255, 255, 255, 0.35)';
+        } else {
+          slotEl.textContent = '';
+          slotEl.style.border = '2px solid rgba(255, 255, 255, 0.5)';
+          const c = COLORS[slotColor];
+          const card = document.createElement('div');
+          card.className = 'pixel-card slot-card';
+          card.style.backgroundColor = c.fill;
+          card.style.borderColor = c.border;
+          slotEl.appendChild(card);
+        }
+      });
+
+      document.getElementById('btn-undo').disabled = (history.length === 0 || isAnimating);
+    }
+
+    async function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    // Clear rule: Pure column with >= 6 cards (or all remaining cards of that color) clears!
+    async function checkAndClearColumn(colIdx) {
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+
+      // If entire column is pure color and count >= 6 (or count === col.length and count >= 4)
+      if (count === col.length && count >= 6) {
+        render();
+        const wrap = document.getElementById(`col-wrap-${colIdx}`);
+        if (wrap) wrap.classList.add('clearing-anim');
+        await sleep(220);
+        col.splice(0, col.length);
+        render();
+      }
+    }
+
+    async function onColumnClick(colIdx) {
+      if (isAnimating) return;
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const match = findTargetColumnForColumn(color, colIdx);
+
+      // 1. Move matching group to column
+      if (match) {
+        history.push(cloneState());
+        isAnimating = true;
+        col.splice(col.length - count, count);
+        for (let i = 0; i < count; i++) {
+          columns[match.targetIdx].push(color);
+        }
+        await checkAndClearColumn(match.targetIdx);
+        isAnimating = false;
+        render();
+        return;
+      }
+
+      // 2. Move 1 card to the first available Free Slot
+      const emptySlotIdx = holdingSlots.findIndex(s => s === null);
+      if (emptySlotIdx !== -1) {
+        history.push(cloneState());
+        col.pop();
+        holdingSlots[emptySlotIdx] = color;
+        render();
+        return;
+      }
+
+      // 3. No target and slots full -> shake
+      triggerShake(document.getElementById(`col-wrap-${colIdx}`));
+    }
+
+    async function onSlotClick(slotIdx) {
+      if (isAnimating) return;
+      const color = holdingSlots[slotIdx];
+      if (color === null) return;
+
+      const match = findTargetColumnForSlot(color);
+      if (!match) {
+        triggerShake(document.getElementById(`slot-${slotIdx}`));
+        return;
+      }
+
+      history.push(cloneState());
+      isAnimating = true;
+      holdingSlots[slotIdx] = null;
+      columns[match.targetIdx].push(color);
+      await checkAndClearColumn(match.targetIdx);
+      isAnimating = false;
+      render();
+    }
+
+    function undoMove() {
+      if (history.length === 0 || isAnimating) return;
+      const prev = history.pop();
+      columns = prev.columns;
+      holdingSlots = prev.holdingSlots;
+      render();
+    }
+
+    resetGame();
+  </script>
+</body>
+</html>

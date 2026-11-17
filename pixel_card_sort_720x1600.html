@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Pixel Card Sort 720x1600</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      background: #05130a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #scale-wrapper {
+      position: relative;
+      height: 100vh;
+      aspect-ratio: 720 / 1600;
+      flex-shrink: 0;
+    }
+    /* Fixed 720x1600 Game Board scaled proportionally */
+    #game-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 720px;
+      height: 1600px;
+      transform-origin: top left;
+      background: radial-gradient(circle at 50% 25%, #176537 0%, #114b29 70%, #0a331c 100%);
+      border: 6px solid #082313;
+      border-radius: 40px;
+      padding: 28px 20px;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.55), 0 25px 60px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: border-color 0.3s ease;
+    }
+    /* Minimal Top Bar: Only Undo & Reset Buttons */
+    .top-controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      padding: 4px 6px 24px 6px;
+    }
+    .icon-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.45);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.1s ease, opacity 0.2s ease;
+    }
+    .icon-btn:active {
+      transform: scale(0.92);
+    }
+    .icon-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    /* 6 Wide Columns Area */
+    #tableau-6cols {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 2px;
+      flex: 1;
+    }
+    .col-wrap {
+      position: relative;
+      width: 104px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .col-stack {
+      position: relative;
+      width: 104px;
+      min-height: 168px;
+      border-radius: 14px;
+      border: 2px dashed rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.16);
+      transition: height 0.15s ease;
+    }
+    /* Elongated Card (104 x 168) in the upper stack */
+    .stack-card {
+      position: absolute;
+      left: 0;
+      width: 104px;
+      height: 168px;
+      border-radius: 13px;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+      transition: top 0.15s ease;
+      filter: brightness(0.92);
+    }
+    .stack-card::after, .group-card::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.38);
+      border-radius: 2px;
+    }
+    /* Unified Bottom Group Wrapper (shared glowing outline) */
+    .bottom-group-container {
+      position: absolute;
+      left: 0;
+      width: 104px;
+      border-radius: 14px;
+      outline: 4px solid #ffffff;
+      outline-offset: 0px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 255, 255, 0.3);
+      transition: transform 0.15s ease, top 0.15s ease, height 0.15s ease;
+    }
+    .col-wrap:hover .bottom-group-container {
+      transform: translateY(-6px);
+      outline-color: #facc15;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.7), 0 0 20px rgba(250, 204, 21, 0.55);
+    }
+    /* Elongated Card inside the bottom group container */
+    .group-card {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 168px;
+      border-radius: 13px;
+      border: 2px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .counter-badge {
+      background: #091e11;
+      border: 2px solid #facc15;
+      color: #fef08a;
+      font-size: 22px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+    .progress-track {
+      width: 80px;
+      height: 9px;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #4ade80;
+      transition: width 0.2s ease;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+    .shake-anim {
+      animation: shake 0.24s ease-in-out;
+    }
+    @keyframes popClear {
+      0% { transform: scale(1); opacity: 1; }
+      40% { transform: scale(1.12); opacity: 0.9; }
+      100% { transform: scale(0.5); opacity: 0; }
+    }
+    .clearing-anim {
+      animation: popClear 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scale-wrapper">
+    <div id="game-frame">
+      <!-- Only Undo & Reset Buttons -->
+      <div class="top-controls">
+        <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="icon-btn" onclick="resetGame()" title="Reset">⟳</button>
+      </div>
+
+      <!-- 6 Columns Gameplay -->
+      <div id="tableau-6cols"></div>
+    </div>
+  </div>
+
+  <script>
+    const DESIGN_W = 720;
+    const DESIGN_H = 1600;
+
+    function updateBoardScale() {
+      const vw = document.documentElement.clientWidth || window.innerWidth;
+      const vh = document.documentElement.clientHeight || window.innerHeight;
+      const scale = Math.min(vh / DESIGN_H, vw / DESIGN_W);
+
+      const wrapper = document.getElementById('scale-wrapper');
+      const frame = document.getElementById('game-frame');
+      wrapper.style.width = `${DESIGN_W * scale}px`;
+      wrapper.style.height = `${DESIGN_H * scale}px`;
+      frame.style.transform = `scale(${scale})`;
+    }
+    window.addEventListener('resize', updateBoardScale);
+    window.addEventListener('load', updateBoardScale);
+    updateBoardScale();
+
+    const MAX_BATCH = 8;
+    const CARD_H = 168;
+
+    // 6 Distinct Colors (Both dark/black tones merged into 'D')
+    const COLORS = {
+      D: { fill: '#18181b', border: '#3f3f46' }, // Đen (gộp chung nền tối & mắt)
+      R: { fill: '#ef4444', border: '#b91c1c' }, // Đỏ
+      W: { fill: '#f8fafc', border: '#94a3b8' }, // Trắng
+      S: { fill: '#fed7aa', border: '#d97706' }, // Da
+      G: { fill: '#22c55e', border: '#15803d' }, // Xanh Lá
+      Y: { fill: '#eab308', border: '#a16207' }  // Vàng
+    };
+
+    // Symmetric 6x16 Mushroom Grid with unified Black ('D')
+    const GRID_6X16 = [
+      'DDRRDD',
+      'DRRRRD',
+      'RRWWRR',
+      'RRWWRR',
+      'WRRRRW',
+      'WRRRRW',
+      'RRRRRR',
+      'DSSSSD',
+      'DDSSDD',
+      'DDSSDD',
+      'DSSSSD',
+      'DGGGGD',
+      'GGGGGG',
+      'GGGGGG',
+      'GGYYGG',
+      'GYGGYG'
+    ];
+
+    let columns = [];
+    let history = [];
+    let isAnimating = false;
+
+    function buildInitialColumns() {
+      const cols = [[], [], [], [], [], []];
+      for (let r = 0; r < GRID_6X16.length; r++) {
+        for (let c = 0; c < 6; c++) {
+          cols[c].push(GRID_6X16[r][c]);
+        }
+      }
+      return cols;
+    }
+
+    function cloneState() {
+      return {
+        columns: columns.map(c => [...c])
+      };
+    }
+
+    function getBottomGroupCount(col) {
+      if (col.length === 0) return 0;
+      const color = col[col.length - 1];
+      let k = 0;
+      for (let i = col.length - 1; i >= 0; i--) {
+        if (col[i] === color) k++;
+        else break;
+      }
+      return k;
+    }
+
+    function getTotalRemainingOfColor(color) {
+      let total = 0;
+      columns.forEach(col => {
+        col.forEach(c => {
+          if (c === color) total++;
+        });
+      });
+      return total;
+    }
+
+    function getTargetForColor(color) {
+      const rem = getTotalRemainingOfColor(color);
+      return Math.min(MAX_BATCH, Math.max(1, rem));
+    }
+
+    // Vertical spacing tuned for 720x1600 board and 168px elongated cards
+    function getStepY(totalColLen) {
+      if (totalColLen <= 8) return 54;
+      if (totalColLen <= 12) return 46;
+      if (totalColLen <= 16) return 40;
+      if (totalColLen <= 20) return 34;
+      return 28;
+    }
+
+    function findTargetColForColClick(color, startColIdx) {
+      const n = columns.length;
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function countValidMoves() {
+      let valid = 0;
+      for (let i = 0; i < columns.length; i++) {
+        if (columns[i].length === 0) continue;
+        const color = columns[i][columns[i].length - 1];
+        if (findTargetColForColClick(color, i)) valid++;
+      }
+      return valid;
+    }
+
+    function triggerShake(el) {
+      if (!el) return;
+      el.classList.remove('shake-anim');
+      void el.offsetWidth;
+      el.classList.add('shake-anim');
+    }
+
+    function render() {
+      const totalCards = columns.reduce((acc, c) => acc + c.length, 0);
+      const frame = document.getElementById('game-frame');
+      const validMoves = countValidMoves();
+
+      if (totalCards === 0) {
+        frame.style.borderColor = '#10b981';
+      } else if (validMoves === 0) {
+        frame.style.borderColor = '#ef4444';
+      } else {
+        frame.style.borderColor = '#082313';
+      }
+
+      const board = document.getElementById('tableau-6cols');
+      board.innerHTML = '';
+
+      columns.forEach((col, cIdx) => {
+        const wrap = document.createElement('div');
+        wrap.id = `col-wrap-${cIdx}`;
+        wrap.className = 'col-wrap';
+        wrap.onclick = () => onColumnClick(cIdx);
+
+        const stack = document.createElement('div');
+        stack.className = 'col-stack';
+
+        if (col.length > 0) {
+          const bottomGroupCount = getBottomGroupCount(col);
+          const bottomColor = col[col.length - 1];
+          const target = getTargetForColor(bottomColor);
+          const upperCount = col.length - bottomGroupCount;
+          const stepY = getStepY(col.length);
+
+          // 1. Upper cards
+          for (let i = 0; i < upperCount; i++) {
+            const cKey = col[i];
+            const cInfo = COLORS[cKey];
+            const card = document.createElement('div');
+            card.className = 'stack-card';
+            card.style.top = `${i * stepY}px`;
+            card.style.zIndex = i + 1;
+            card.style.backgroundColor = cInfo.fill;
+            card.style.borderColor = cInfo.border;
+            stack.appendChild(card);
+          }
+
+          // 2. Unified Bottom Group Container
+          const groupTop = upperCount * stepY;
+          const groupHeight = CARD_H + (bottomGroupCount - 1) * stepY;
+          const groupBox = document.createElement('div');
+          groupBox.id = `group-col-${cIdx}`;
+          groupBox.className = 'bottom-group-container';
+          groupBox.style.top = `${groupTop}px`;
+          groupBox.style.height = `${groupHeight}px`;
+          groupBox.style.zIndex = upperCount + 2;
+
+          const cInfo = COLORS[bottomColor];
+          const pct = Math.min(100, Math.round((bottomGroupCount / target) * 100));
+
+          for (let g = 0; g < bottomGroupCount; g++) {
+            const isLastCard = (g === bottomGroupCount - 1);
+            const gCard = document.createElement('div');
+            gCard.className = 'group-card';
+            gCard.style.top = `${g * stepY}px`;
+            gCard.style.zIndex = g + 1;
+            gCard.style.backgroundColor = cInfo.fill;
+            gCard.style.borderColor = cInfo.border;
+
+            if (isLastCard) {
+              const displayCount = Math.min(bottomGroupCount, target);
+              const extraCount = bottomGroupCount - target;
+              gCard.innerHTML = `
+                <div class="counter-badge">${ extraCount > 0 ? `${target}/${target}` : `${displayCount}/${target}` }</div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: ${pct}%"></div>
+                </div>
+              `;
+            }
+
+            groupBox.appendChild(gCard);
+          }
+
+          stack.appendChild(groupBox);
+          stack.style.height = `${groupTop + groupHeight}px`;
+        }
+
+        wrap.appendChild(stack);
+        board.appendChild(wrap);
+      });
+
+      document.getElementById('btn-undo').disabled = (history.length === 0 || isAnimating);
+    }
+
+    async function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    async function checkAndClearBatch(colIdx) {
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      while (col.length > 0) {
+        const count = getBottomGroupCount(col);
+        const color = col[col.length - 1];
+        const target = getTargetForColor(color);
+
+        if (count < target) break;
+
+        const leftover = count - target;
+        render();
+
+        const groupEl = document.getElementById(`group-col-${colIdx}`);
+        if (groupEl) {
+          if (leftover === 0) {
+            groupEl.classList.add('clearing-anim');
+          } else {
+            const cardEls = groupEl.querySelectorAll('.group-card');
+            for (let i = leftover; i < cardEls.length; i++) {
+              cardEls[i].classList.add('clearing-anim');
+            }
+          }
+        }
+
+        await sleep(240);
+        col.splice(col.length - target, target);
+        render();
+      }
+    }
+
+    async function onColumnClick(colIdx) {
+      if (isAnimating) return;
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const match = findTargetColForColClick(color, colIdx);
+
+      if (match) {
+        history.push(cloneState());
+        isAnimating = true;
+        col.splice(col.length - count, count);
+        for (let i = 0; i < count; i++) {
+          columns[match.targetIdx].push(color);
+        }
+        await checkAndClearBatch(match.targetIdx);
+        isAnimating = false;
+        render();
+        return;
+      }
+
+      triggerShake(document.getElementById(`col-wrap-${colIdx}`));
+    }
+
+    function undoMove() {
+      if (history.length === 0 || isAnimating) return;
+      const prev = history.pop();
+      columns = prev.columns;
+      render();
+    }
+
+    function resetGame() {
+      if (isAnimating) return;
+      columns = buildInitialColumns();
+      history = [];
+      isAnimating = false;
+      render();
+    }
+
+    resetGame();
+  </script>
+</body>
+</html>

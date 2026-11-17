@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Solved without slot? YES! Steps: 41 -> C1 -> C2 -> C2 -> C3 -> C3 -> C3 -> C2 -> C4 -> C4 -> C4 -> C3 -> C5 -> C1 -> C1 -> C4 -> C3 -> C1 -> C1 -> C1 -> C2 -> C2 -> C2 -> C2 -> C3 -> C3 -> C4 -> C2 -> C4 -> C3 -> C5 -> C1 -> C3 -> C4 -> C5 -> C5 -> C6 -> C1 -> C6 -> C2 -> C1 -> C3

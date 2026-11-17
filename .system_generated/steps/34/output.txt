@@ -1,0 +1,22 @@
+Command exited with code 0.
+
+Command output:
+Total simple paths: 18
+C2 -> C2 -> C2 -> C1 -> C3 -> C1 -> Slot
+C2 -> C2 -> C2 -> C1 -> C3 -> C3 -> Slot
+C2 -> C2 -> C2 -> C1 -> C3 -> Slot -> C1
+C2 -> C2 -> C2 -> C1 -> C3 -> Slot -> C3
+C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1
+C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C3
+C2 -> C2 -> C2 -> C3 -> C1 -> C1 -> Slot
+C2 -> C2 -> C2 -> C3 -> C1 -> C3 -> Slot
+C2 -> C2 -> C2 -> C3 -> C1 -> Slot -> C1
+C2 -> C2 -> C2 -> C3 -> C1 -> Slot -> C3
+C2 -> C2 -> C2 -> C3 -> Slot -> C1 -> C1
+C2 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3
+C2 -> C2 -> C3 -> C1 -> C1 -> Slot
+C2 -> C2 -> C3 -> C1 -> C3 -> Slot
+C2 -> C2 -> C3 -> C1 -> Slot -> C1
+C2 -> C2 -> C3 -> C1 -> Slot -> C3
+C2 -> C2 -> C3 -> Slot -> C1 -> C1
+C2 -> C2 -> C3 -> Slot -> C1 -> C3

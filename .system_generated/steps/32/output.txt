@@ -1,0 +1,1007 @@
+Command exited with code 0.
+
+Command output:
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> C3 -> C1 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3 -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C2 -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C2 -> C3 -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1 -> C3 -> C2
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> Slot -> C3 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3 -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C3 -> C3
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot -> C3 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C3 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C3 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C3
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C3 -> C3
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (14): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C3 -> C2 -> C1
+WIN PATH (9): C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1
+WIN PATH (10): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> C3 -> C1 -> Slot
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> C3 -> Slot -> C1
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C2 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> Slot -> C3 -> C1
+WIN PATH (7): C1 -> C2 -> C2 -> C3 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C2 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C2 -> Slot -> C3 -> C3 -> C1
+WIN PATH (7): C1 -> C2 -> C2 -> Slot -> C3 -> C3 -> C3
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> C3 -> C2 -> Slot -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> C3 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (7): C1 -> C2 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> C3 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (7): C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (8): C1 -> C2 -> C3 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C2 -> C3 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> C3
+WIN PATH (9): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1 -> C3 -> C2
+WIN PATH (9): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1 -> C3 -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> Slot -> C3 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C1 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (8): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3 -> C2
+WIN PATH (8): C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3 -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> C3 -> Slot -> C3 -> C3
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot -> C3 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C1 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C3 -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> C3 -> Slot -> C3 -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2
+WIN PATH (12): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C3 -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C2 -> C3 -> C2 -> Slot -> C3 -> C3 -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> C3 -> C3
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> C2 -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C3 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C2 -> C3 -> C3
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (13): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C2 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C1 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (11): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (12): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (9): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C1 -> C2 -> Slot -> C3 -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (7): C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C3 -> C3 -> C2 -> C1
+WIN PATH (8): C1 -> C2 -> Slot -> C3 -> C3 -> C3 -> C2 -> C2
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C2 -> C2 -> C1 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (8): C2 -> C2 -> C1 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (7): C2 -> C2 -> C1 -> Slot -> C3 -> C3 -> C1
+WIN PATH (7): C2 -> C2 -> C1 -> Slot -> C3 -> C3 -> C3
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C2 -> C3 -> C1
+WIN PATH (9): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C2 -> C3 -> C3
+WIN PATH (8): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C3 -> C1
+WIN PATH (8): C2 -> C2 -> C2 -> C1 -> Slot -> C3 -> C3 -> C3
+WIN PATH (8): C2 -> C2 -> C2 -> C3 -> C1 -> Slot -> C3 -> C2
+WIN PATH (8): C2 -> C2 -> C2 -> C3 -> C1 -> Slot -> C3 -> C3
+WIN PATH (8): C2 -> C2 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (9): C2 -> C2 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1 -> C1
+WIN PATH (9): C2 -> C2 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1 -> C2
+WIN PATH (8): C2 -> C2 -> C2 -> C3 -> C3 -> C3 -> C1 -> Slot
+WIN PATH (9): C2 -> C2 -> C2 -> C3 -> C3 -> C3 -> Slot -> C1 -> C1
+WIN PATH (9): C2 -> C2 -> C2 -> C3 -> C3 -> C3 -> Slot -> C1 -> C2
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C2 -> C3 -> C1 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (8): C2 -> C3 -> C1 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (7): C2 -> C3 -> C1 -> Slot -> C2 -> C3 -> C1
+WIN PATH (7): C2 -> C3 -> C1 -> Slot -> C2 -> C3 -> C3
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (9): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C2 -> C3 -> C1 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C1
+WIN PATH (7): C2 -> C3 -> C1 -> Slot -> C3 -> C2 -> C2
+WIN PATH (8): C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (8): C2 -> C3 -> C1 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (6): C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (7): C2 -> C3 -> C3 -> C2 -> C2 -> C1 -> Slot
+WIN PATH (8): C2 -> C3 -> C3 -> C2 -> C2 -> Slot -> C1 -> C1
+WIN PATH (8): C2 -> C3 -> C3 -> C2 -> C2 -> Slot -> C1 -> C2
+WIN PATH (7): C2 -> C3 -> C3 -> C2 -> Slot -> C1 -> C1
+WIN PATH (7): C2 -> C3 -> C3 -> C2 -> Slot -> C1 -> C3
+WIN PATH (8): C2 -> C3 -> C3 -> C2 -> Slot -> C2 -> C1 -> C1
+WIN PATH (8): C2 -> C3 -> C3 -> C2 -> Slot -> C2 -> C1 -> C3
+WIN PATH (8): C2 -> C3 -> C3 -> C3 -> C1 -> Slot -> C2 -> C2
+WIN PATH (8): C2 -> C3 -> C3 -> C3 -> C1 -> Slot -> C2 -> C3
+WIN PATH (7): C2 -> C3 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (8): C2 -> C3 -> C3 -> C3 -> C2 -> C2 -> C1 -> Slot
+WIN PATH (9): C2 -> C3 -> C3 -> C3 -> C2 -> C2 -> Slot -> C1 -> C1
+WIN PATH (9): C2 -> C3 -> C3 -> C3 -> C2 -> C2 -> Slot -> C1 -> C2
+WIN PATH (8): C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C1 -> C1
+WIN PATH (8): C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C1 -> C3
+WIN PATH (9): C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C2 -> C1 -> C1
+WIN PATH (9): C2 -> C3 -> C3 -> C3 -> C2 -> Slot -> C2 -> C1 -> C3
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (11): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1
+WIN PATH (8): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C2 -> C2
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (9): C3 -> C1 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> C3 -> Slot -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> C3 -> Slot -> C3
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> Slot -> C3 -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> C2 -> Slot -> C3 -> C3
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> C2 -> Slot -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> C2 -> Slot -> C2
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> C2 -> Slot -> C2
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> C3 -> Slot -> C2 -> C2
+WIN PATH (9): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C1 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> C2 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C1
+WIN PATH (9): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C2 -> Slot -> C2
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> C3 -> Slot -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> Slot -> C2 -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> C3 -> Slot -> C2 -> C2
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> C3 -> Slot -> C3 -> C2 -> C2
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> C3 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> C3 -> Slot -> C3
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C2 -> Slot -> C3 -> C3
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C1 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> C3 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C1
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C2 -> C1 -> C3 -> Slot -> C3
+WIN PATH (8): C3 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> Slot -> C2 -> C2 -> C3 -> C3
+WIN PATH (7): C3 -> C1 -> C2 -> Slot -> C2 -> C3 -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> Slot -> C2 -> C3 -> C3
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C1 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> C2 -> Slot
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C1
+WIN PATH (9): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C2 -> Slot -> C2
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> C2 -> Slot
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> C2 -> Slot -> C2
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C1
+WIN PATH (10): C3 -> C1 -> C2 -> Slot -> C3 -> C1 -> C3 -> Slot -> C2 -> C2
+WIN PATH (7): C3 -> C1 -> C2 -> Slot -> C3 -> C2 -> C1
+WIN PATH (7): C3 -> C1 -> C2 -> Slot -> C3 -> C2 -> C2
+WIN PATH (8): C3 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C1
+WIN PATH (8): C3 -> C1 -> C2 -> Slot -> C3 -> C3 -> C2 -> C2
+WIN PATH (7): C3 -> C3 -> Slot -> C2 -> C2 -> C1 -> Slot
+WIN PATH (8): C3 -> C3 -> Slot -> C2 -> C2 -> C2 -> C1 -> Slot
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C2 -> C2 -> Slot -> C1 -> C1
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C2 -> C2 -> Slot -> C1 -> C2
+WIN PATH (8): C3 -> C3 -> Slot -> C2 -> C2 -> Slot -> C1 -> C1
+WIN PATH (8): C3 -> C3 -> Slot -> C2 -> C2 -> Slot -> C1 -> C3
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C2 -> Slot -> C2 -> C1 -> C1
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C2 -> Slot -> C2 -> C1 -> C3
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C3 -> C1 -> Slot -> C2 -> C2
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C3 -> C1 -> Slot -> C2 -> C3
+WIN PATH (8): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> C1 -> Slot
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> C2 -> C1 -> Slot
+WIN PATH (10): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> C2 -> Slot -> C1 -> C1
+WIN PATH (10): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> C2 -> Slot -> C1 -> C2
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> Slot -> C1 -> C1
+WIN PATH (9): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> Slot -> C1 -> C3
+WIN PATH (10): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> Slot -> C2 -> C1 -> C1
+WIN PATH (10): C3 -> C3 -> Slot -> C2 -> C3 -> C2 -> Slot -> C2 -> C1 -> C3

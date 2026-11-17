@@ -12,20 +12,30 @@
       user-select: none;
       -webkit-user-select: none;
     }
-    body {
+    html, body {
+      width: 100vw;
+      height: 100vh;
       background: #05130a;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding: 12px;
+      align-items: center;
+      overflow: hidden;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
-    /* Fixed 720x1600 Game Board */
-    #game-frame {
+    #scale-wrapper {
       position: relative;
+      height: 100vh;
+      aspect-ratio: 720 / 1600;
+      flex-shrink: 0;
+    }
+    /* Fixed 720x1600 Game Board scaled proportionally via transform */
+    #game-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 720px;
       height: 1600px;
-      flex-shrink: 0;
+      transform-origin: top left;
       background: radial-gradient(circle at 50% 25%, #176537 0%, #114b29 70%, #0a331c 100%);
       border: 8px solid #082313;
       border-radius: 40px;
@@ -190,22 +200,20 @@
     /* 3D Stacked Deck Layers inside Slot */
     .deck-stack-wrap {
       position: relative;
-      width: 122px;
-      height: 164px;
-      margin-top: 14px;
+      width: 132px;
+      height: 184px;
     }
     .deck-layer {
       position: absolute;
-      left: 0;
-      width: 122px;
-      height: 158px;
+      width: 104px;
+      height: 136px;
       border-radius: 12px;
-      border: 2px solid rgba(0, 0, 0, 0.5);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+      border: 2px solid rgba(255, 255, 255, 0.82);
+      box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.55), inset 0 0 0 2px rgba(0, 0, 0, 0.28);
     }
     .deck-layer.top-layer {
-      outline: 2.5px solid #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      border: 3px solid #ffffff;
+      box-shadow: -3px 6px 12px rgba(0, 0, 0, 0.65);
     }
     /* Counter Box underneath each Slot */
     .slot-counter-box {
@@ -266,21 +274,44 @@
 </head>
 <body>
 
-  <div id="game-frame">
-    <!-- Only Undo & Reset Buttons -->
-    <div class="top-controls">
-      <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
-      <button class="icon-btn" onclick="resetGame()" title="Reset">⟳</button>
+  <div id="scale-wrapper">
+    <div id="game-frame">
+      <!-- Only Undo & Reset Buttons -->
+      <div class="top-controls">
+        <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="icon-btn" onclick="resetGame()" title="Reset">⟳</button>
+      </div>
+
+      <!-- 6 Columns Map -->
+      <div id="tableau-6cols"></div>
+
+      <!-- 4 Deck Collector Slots at Bottom -->
+      <div id="slots-row" class="slots-section"></div>
     </div>
-
-    <!-- 6 Columns Map -->
-    <div id="tableau-6cols"></div>
-
-    <!-- 4 Deck Collector Slots at Bottom -->
-    <div id="slots-row" class="slots-section"></div>
   </div>
 
   <script>
+    const DESIGN_W = 720;
+    const DESIGN_H = 1600;
+    let currentScale = 0.5;
+
+    function updateBoardScale() {
+      const vw = document.documentElement.clientWidth || window.innerWidth;
+      const vh = document.documentElement.clientHeight || window.innerHeight;
+      // Height hugs the browser viewport height; width scales strictly by 720:1600 ratio
+      currentScale = Math.min(vh / DESIGN_H, vw / DESIGN_W);
+
+      const wrapper = document.getElementById('scale-wrapper');
+      const frame = document.getElementById('game-frame');
+      wrapper.style.height = `${vh * currentScale / (vh / DESIGN_H)}px`;
+      wrapper.style.width = `${DESIGN_W * currentScale}px`;
+      wrapper.style.height = `${DESIGN_H * currentScale}px`;
+      frame.style.transform = `scale(${currentScale})`;
+    }
+    window.addEventListener('resize', updateBoardScale);
+    window.addEventListener('load', updateBoardScale);
+    updateBoardScale();
+
     const MAX_BATCH = 8;
     const CARD_W = 102;
     const CARD_H = 164;
@@ -366,11 +397,15 @@
     }
 
     function getStepY(totalColLen) {
-      if (totalColLen <= 8) return 46;
-      if (totalColLen <= 12) return 40;
-      if (totalColLen <= 16) return 35;
-      if (totalColLen <= 20) return 30;
-      return 24;
+      if (totalColLen <= 1) return 46;
+      const maxTableauH = 1080;
+      const maxAllowedStep = Math.floor((maxTableauH - CARD_H) / (totalColLen - 1));
+      let baseStep = 46;
+      if (totalColLen > 20) baseStep = 26;
+      else if (totalColLen > 16) baseStep = 30;
+      else if (totalColLen > 12) baseStep = 35;
+      else if (totalColLen > 8) baseStep = 40;
+      return Math.min(baseStep, maxAllowedStep);
     }
 
     function findTargetSlot(color) {
@@ -381,10 +416,18 @@
 
     function findFallbackColumn(color, startColIdx) {
       const n = columns.length;
+      // Priority 2: Another column with matching bottom color
       for (let step = 1; step < n; step++) {
         const idx = (startColIdx + step) % n;
         const col = columns[idx];
         if (col.length > 0 && col[col.length - 1] === color) {
+          return idx;
+        }
+      }
+      // Priority 3: An empty column
+      for (let step = 1; step < n; step++) {
+        const idx = (startColIdx + step) % n;
+        if (columns[idx].length === 0) {
           return idx;
         }
       }
@@ -520,10 +563,10 @@
             const layer = document.createElement('div');
             const isTop = (l === visibleLayers - 1);
             layer.className = `deck-layer ${isTop ? 'top-layer' : ''}`;
-            layer.style.top = `${(7 - l) * 3}px`;
+            layer.style.left = `${4 + l * 2.5}px`;
+            layer.style.top = `${42 - l * 6}px`;
             layer.style.zIndex = l + 1;
             layer.style.backgroundColor = cInfo.fill;
-            layer.style.borderColor = cInfo.border;
             deckWrap.appendChild(layer);
           }
 
@@ -617,10 +660,10 @@
       const frameRect = document.getElementById('game-frame').getBoundingClientRect();
       const r = el.getBoundingClientRect();
       return {
-        left: r.left - frameRect.left,
-        top: r.top - frameRect.top,
-        width: r.width,
-        height: r.height
+        left: (r.left - frameRect.left) / currentScale,
+        top: (r.top - frameRect.top) / currentScale,
+        width: r.width / currentScale,
+        height: r.height / currentScale
       };
     }
 
@@ -674,8 +717,8 @@
               const trayEl = document.getElementById(`slot-tray-${targetSlotIdx}`);
               const trayRect = getRelativeRect(trayEl);
               const futureLayer = Math.min((slots[targetSlotIdx]?.count || 0) + 1, 8) - 1;
-              const endX = trayRect.left + 10;
-              const endY = trayRect.top + 19 + (7 - futureLayer) * 3;
+              const endX = trayRect.left + 8 + futureLayer * 2.5;
+              const endY = trayRect.top + 48 - futureLayer * 6;
 
               launchFlyingCard({
                 color,
@@ -685,8 +728,8 @@
                 startH: CARD_H,
                 endX,
                 endY,
-                endW: 122,
-                endH: 158,
+                endW: 104,
+                endH: 136,
                 durationMs: FLIGHT_MS,
                 onLand: () => {
                   slots[targetSlotIdx].count += 1;

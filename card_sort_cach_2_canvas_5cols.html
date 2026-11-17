@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cách 2: Khung Tranh Pixel 10×10 + 5 Cột Lớn (68px)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      background: #06170d;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 8px;
+    }
+    #game-frame {
+      position: relative;
+      width: 420px;
+      max-width: 100%;
+      background: radial-gradient(circle at 50% 20%, #176537 0%, #114b29 70%, #0a331c 100%);
+      border: 4px solid #082313;
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5), 0 18px 40px rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .title-area h1 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fef08a;
+    }
+    .title-area p {
+      font-size: 12px;
+      color: #86efac;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-pill {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fef9c3;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .icon-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    /* Upper 10x10 Pixel Canvas */
+    .canvas-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 8px;
+    }
+    #pixel-canvas-box {
+      background: #092614;
+      border: 2px solid #facc15;
+      border-radius: 12px;
+      padding: 6px;
+      display: grid;
+      grid-template-columns: repeat(10, 18px);
+      grid-template-rows: repeat(10, 18px);
+      gap: 2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    .px-cell {
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .px-cell.empty {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+    .feed-hint {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fef08a;
+      margin: 6px 0 2px 0;
+    }
+    /* 5 Extra-Wide Playable Columns (68px each) */
+    #tableau-5cols {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 6px 2px;
+      min-height: 185px;
+    }
+    .col5-wrap {
+      position: relative;
+      width: 68px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .col5-stack {
+      position: relative;
+      width: 68px;
+      min-height: 72px;
+      border-radius: 8px;
+      border: 1.5px dashed rgba(255, 255, 255, 0.25);
+      background: rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .upper-card-5 {
+      position: absolute;
+      left: 0;
+      width: 68px;
+      height: 36px;
+      border-radius: 7px;
+      border: 1px solid rgba(0, 0, 0, 0.45);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    }
+    .bottom-card-5 {
+      position: absolute;
+      left: 0;
+      width: 68px;
+      height: 70px;
+      border-radius: 8px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.14s ease;
+    }
+    .col5-wrap:hover .bottom-card-5 {
+      transform: translateY(-4px) scale(1.03);
+    }
+    .counter-badge {
+      background: #091e11;
+      border: 1px solid #facc15;
+      color: #fef08a;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 7px;
+      margin-bottom: 6px;
+    }
+    .progress-track {
+      width: 52px;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #4ade80;
+      transition: width 0.2s ease;
+    }
+    /* Single Holding Slot */
+    .slot-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .slot-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #bbf7d0;
+      margin-bottom: 6px;
+    }
+    #slot-box {
+      width: 180px;
+      height: 56px;
+      border-radius: 10px;
+      border: 2px dashed rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+    #slot-box:hover {
+      transform: translateY(-2px);
+      border-color: #facc15;
+    }
+    .slot-filled {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      border: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    .shake-anim {
+      animation: shake 0.24s ease-in-out;
+    }
+    @keyframes popClear {
+      0% { transform: scale(1); opacity: 1; }
+      40% { transform: scale(1.15); opacity: 0.9; }
+      100% { transform: scale(0.5); opacity: 0; }
+    }
+    .clearing-anim {
+      animation: popClear 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="game-frame">
+    <div class="header-bar">
+      <div class="title-area">
+        <h1>Cách 2: Tranh Pixel 10×10 + 5 Cột Siêu To</h1>
+        <p id="status-msg">Rút bài ở 5 cột dưới · Pixel từ tranh trên tự động rơi xuống!</p>
+      </div>
+      <div class="controls">
+        <span id="remain-badge" class="stat-pill">Còn: 100</span>
+        <button id="btn-undo" class="icon-btn" onclick="undoMove()" title="Undo">↩</button>
+        <button class="icon-btn" onclick="resetGame()" title="Chơi lại">⟳</button>
+      </div>
+    </div>
+
+    <!-- Upper 10x10 Pixel Art Canvas -->
+    <div class="canvas-section">
+      <div id="pixel-canvas-box"></div>
+      <div class="feed-hint">▼ Tranh tự động rơi bài xuống 5 Cột lớn (68px) ▼</div>
+    </div>
+
+    <!-- 5 Extra-Wide Playable Columns -->
+    <div id="tableau-5cols"></div>
+
+    <!-- Single Holding Slot -->
+    <div class="slot-area">
+      <div class="slot-title">📥 1 SLOT CHỜ DUY NHẤT (Chứa mọi lá cùng màu)</div>
+      <div id="slot-box" onclick="onSlotClick()"></div>
+    </div>
+  </div>
+
+  <script>
+    const MAX_BATCH = 8;
+
+    const COLORS = {
+      B: { name: 'Xanh Đêm', fill: '#0f172a', border: '#334155', text: '#ffffff' },
+      R: { name: 'Đỏ', fill: '#ef4444', border: '#b91c1c', text: '#ffffff' },
+      W: { name: 'Trắng', fill: '#f8fafc', border: '#94a3b8', text: '#0f172a' },
+      S: { name: 'Màu Da', fill: '#fed7aa', border: '#d97706', text: '#7c2d12' },
+      D: { name: 'Mắt Đen', fill: '#18181b', border: '#52525b', text: '#ffffff' },
+      G: { name: 'Xanh Lá', fill: '#22c55e', border: '#15803d', text: '#052e16' },
+      Y: { name: 'Vàng', fill: '#eab308', border: '#a16207', text: '#422006' }
+    };
+
+    // 10x10 High-Resolution Mushroom Pixel Art (100 pixels total)
+    const INITIAL_CANVAS_10X10 = [
+      'BBBRRRRBBB',
+      'BBRRRRRRBB',
+      'BRWWWRRWRB',
+      'RWWWWRRWWR',
+      'RWWWWRRWWR',
+      'RRRRRRRRRR',
+      'BSSSSSSSSB',
+      'BSSDSSDSSB',
+      'BSSDSSDSSB',
+      'BBGGYYGGGB'
+    ];
+
+    // State:
+    // pixelGrid[r][c] is colorKey or null (if already dropped into a playable column)
+    let pixelGrid = [];
+    let columns = [[], [], [], [], []];
+    let holdingSlot = null;
+    let history = [];
+    let isAnimating = false;
+
+    function cloneState() {
+      return {
+        pixelGrid: pixelGrid.map(row => [...row]),
+        columns: columns.map(col => [...col]),
+        holdingSlot: holdingSlot ? { ...holdingSlot } : null
+      };
+    }
+
+    function setStatus(msg) {
+      document.getElementById('status-msg').textContent = msg;
+    }
+
+    // Pull the lowest available pixel from the 2 canvas columns (2*colIdx, 2*colIdx+1)
+    function popBottomPixelForColumn(colIdx) {
+      const c1 = colIdx * 2;
+      const c2 = colIdx * 2 + 1;
+      for (let r = 9; r >= 0; r--) {
+        if (pixelGrid[r][c2] !== null) {
+          const val = pixelGrid[r][c2];
+          pixelGrid[r][c2] = null;
+          return val;
+        }
+        if (pixelGrid[r][c1] !== null) {
+          const val = pixelGrid[r][c1];
+          pixelGrid[r][c1] = null;
+          return val;
+        }
+      }
+      return null;
+    }
+
+    function hasPixelsAboveColumn(colIdx) {
+      const c1 = colIdx * 2;
+      const c2 = colIdx * 2 + 1;
+      for (let r = 9; r >= 0; r--) {
+        if (pixelGrid[r][c1] !== null || pixelGrid[r][c2] !== null) return true;
+      }
+      return false;
+    }
+
+    // Feed pixels from canvas into column `colIdx` so it has up to 3 distinct groups
+    function refillColumnFromCanvas(colIdx, forceFillEmpty = false) {
+      const col = columns[colIdx];
+      // If column became empty, keep at least 1 empty column on board if none other is empty (unless forced)
+      const emptyCount = columns.filter(c => c.length === 0).length;
+      if (col.length === 0 && emptyCount <= 1 && !forceFillEmpty) {
+        return;
+      }
+      while (col.length < 4) {
+        const px = popBottomPixelForColumn(colIdx);
+        if (!px) break;
+        col.unshift(px);
+      }
+    }
+
+    function getBottomGroupCount(col) {
+      if (col.length === 0) return 0;
+      const color = col[col.length - 1];
+      let k = 0;
+      for (let i = col.length - 1; i >= 0; i--) {
+        if (col[i] === color) k++;
+        else break;
+      }
+      return k;
+    }
+
+    function getTotalRemainingOfColor(color) {
+      let total = holdingSlot && holdingSlot.color === color ? holdingSlot.count : 0;
+      columns.forEach(col => {
+        col.forEach(c => {
+          if (c === color) total++;
+        });
+      });
+      pixelGrid.forEach(row => {
+        row.forEach(c => {
+          if (c === color) total++;
+        });
+      });
+      return total;
+    }
+
+    function getTargetForColor(color) {
+      const rem = getTotalRemainingOfColor(color);
+      return Math.min(MAX_BATCH, Math.max(1, rem));
+    }
+
+    function findTargetColForColClick(color, startColIdx) {
+      const n = columns.length;
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      for (let s = 1; s < n; s++) {
+        const idx = (startColIdx + s) % n;
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function findTargetColForSlot(color) {
+      for (let idx = 0; idx < columns.length; idx++) {
+        const col = columns[idx];
+        if (col.length > 0 && col[col.length - 1] === color) {
+          return { targetIdx: idx, reason: 'color_match' };
+        }
+      }
+      for (let idx = 0; idx < columns.length; idx++) {
+        if (columns[idx].length === 0) {
+          return { targetIdx: idx, reason: 'empty_col' };
+        }
+      }
+      return null;
+    }
+
+    function triggerShake(el) {
+      if (!el) return;
+      el.classList.remove('shake-anim');
+      void el.offsetWidth;
+      el.classList.add('shake-anim');
+    }
+
+    function render() {
+      // Count remaining
+      let totalLeft = holdingSlot ? holdingSlot.count : 0;
+      columns.forEach(c => totalLeft += c.length);
+      pixelGrid.forEach(r => r.forEach(c => { if (c !== null) totalLeft++; }));
+      document.getElementById('remain-badge').textContent = `Còn: ${totalLeft}`;
+
+      // 1. Render 10x10 Pixel Canvas
+      const canvasBox = document.getElementById('pixel-canvas-box');
+      canvasBox.innerHTML = '';
+      for (let r = 0; r < 10; r++) {
+        for (let c = 0; c < 10; c++) {
+          const cell = document.createElement('div');
+          const cKey = pixelGrid[r][c];
+          if (cKey === null) {
+            cell.className = 'px-cell empty';
+          } else {
+            cell.className = 'px-cell';
+            cell.style.backgroundColor = COLORS[cKey].fill;
+            cell.style.borderColor = COLORS[cKey].border;
+          }
+          canvasBox.appendChild(cell);
+        }
+      }
+
+      // 2. Render 5 Extra-Wide Columns
+      const board = document.getElementById('tableau-5cols');
+      board.innerHTML = '';
+
+      columns.forEach((col, cIdx) => {
+        const wrap = document.createElement('div');
+        wrap.id = `col5-wrap-${cIdx}`;
+        wrap.className = 'col5-wrap';
+        wrap.onclick = () => onColumnClick(cIdx);
+
+        const stack = document.createElement('div');
+        stack.className = 'col5-stack';
+
+        if (col.length === 0) {
+          const canPull = hasPixelsAboveColumn(cIdx);
+          stack.innerHTML = `<span style="font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 700; text-align: center;">${canPull ? 'Cột trống<br/>(Chạm rút)' : 'Cột trống'}</span>`;
+        } else {
+          const bottomGroupCount = getBottomGroupCount(col);
+          const bottomColor = col[col.length - 1];
+          const target = getTargetForColor(bottomColor);
+
+          // Collapse consecutive same-color groups visually so column stays compact
+          const upperCards = col.slice(0, col.length - bottomGroupCount);
+          const displayUpper = upperCards.slice(-3); // Show up to 3 upper cards
+          const stepY = 20;
+
+          displayUpper.forEach((cKey, idx) => {
+            const cInfo = COLORS[cKey];
+            const card = document.createElement('div');
+            card.className = 'upper-card-5';
+            card.style.top = `${idx * stepY}px`;
+            card.style.zIndex = idx + 1;
+            card.style.backgroundColor = cInfo.fill;
+            card.style.borderColor = cInfo.border;
+            stack.appendChild(card);
+          });
+
+          const padTop = displayUpper.length * stepY;
+          const cInfo = COLORS[bottomColor];
+          const pad = document.createElement('div');
+          pad.id = `pad5-col-${cIdx}`;
+          pad.className = 'bottom-card-5';
+          pad.style.top = `${padTop}px`;
+          pad.style.zIndex = displayUpper.length + 2;
+          pad.style.backgroundColor = cInfo.fill;
+
+          const pct = Math.min(100, Math.round((bottomGroupCount / target) * 100));
+          pad.innerHTML = `
+            <div class="counter-badge">${bottomGroupCount}/${target}</div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: ${pct}%"></div>
+            </div>
+          `;
+          stack.appendChild(pad);
+          stack.style.height = `${padTop + 72}px`;
+        }
+
+        wrap.appendChild(stack);
+        board.appendChild(wrap);
+      });
+
+      // 3. Render Slot
+      const slotBox = document.getElementById('slot-box');
+      slotBox.innerHTML = '';
+      if (!holdingSlot || holdingSlot.count === 0) {
+        slotBox.innerHTML = `<span style="font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 700;">SLOT TRỐNG</span>`;
+      } else {
+        const cInfo = COLORS[holdingSlot.color];
+        const target = getTargetForColor(holdingSlot.color);
+        const filled = document.createElement('div');
+        filled.className = 'slot-filled';
+        filled.style.backgroundColor = cInfo.fill;
+        filled.style.color = cInfo.text;
+        filled.innerHTML = `
+          <div>
+            <div style="font-size: 12px; font-weight: 800;">${cInfo.name}</div>
+            <div style="font-size: 12px; opacity: 0.85;">Chạm để đẩy lên</div>
+          </div>
+          <div class="counter-badge" style="margin-bottom: 0;">${holdingSlot.count}/${target}</div>
+        `;
+        slotBox.appendChild(filled);
+      }
+
+      document.getElementById('btn-undo').disabled = (history.length === 0 || isAnimating);
+    }
+
+    async function sleep(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    async function checkAndClearBatch(colIdx) {
+      const col = columns[colIdx];
+      if (col.length === 0) return;
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const target = getTargetForColor(color);
+
+      if (count >= target) {
+        render();
+        const padEl = document.getElementById(`pad5-col-${colIdx}`);
+        if (padEl) padEl.classList.add('clearing-anim');
+        setStatus(`💥 Cột ${colIdx + 1} gom đủ ${count}/${target} lá ${COLORS[color].name} ➔ NỔ CLEAR!`);
+        await sleep(240);
+        col.splice(col.length - count, count);
+        refillColumnFromCanvas(colIdx, false);
+        render();
+      }
+    }
+
+    async function onColumnClick(colIdx) {
+      if (isAnimating) return;
+      const col = columns[colIdx];
+
+      // If column is empty and has pixels above it, tapping it dispenses new cards from the painting!
+      if (col.length === 0) {
+        if (hasPixelsAboveColumn(colIdx)) {
+          history.push(cloneState());
+          refillColumnFromCanvas(colIdx, true);
+          setStatus(`🔽 Rút thêm bài từ tranh Pixel xuống Cột ${colIdx + 1}.`);
+          render();
+        }
+        return;
+      }
+
+      const count = getBottomGroupCount(col);
+      const color = col[col.length - 1];
+      const match = findTargetColForColClick(color, colIdx);
+
+      if (match) {
+        history.push(cloneState());
+        isAnimating = true;
+        col.splice(col.length - count, count);
+        refillColumnFromCanvas(colIdx, false);
+
+        for (let i = 0; i < count; i++) {
+          columns[match.targetIdx].push(color);
+        }
+        setStatus(`✅ Ghép ${count} lá ${COLORS[color].name} sang Cột ${match.targetIdx + 1}.`);
+        await checkAndClearBatch(match.targetIdx);
+        isAnimating = false;
+        render();
+        return;
+      }
+
+      if (!holdingSlot || holdingSlot.color === color) {
+        history.push(cloneState());
+        col.splice(col.length - count, count);
+        refillColumnFromCanvas(colIdx, false);
+
+        if (!holdingSlot) {
+          holdingSlot = { color, count };
+        } else {
+          holdingSlot.count += count;
+        }
+        setStatus(`📥 Đưa ${count} lá ${COLORS[color].name} vào Slot chờ.`);
+        render();
+        return;
+      }
+
+      triggerShake(document.getElementById(`col5-wrap-${colIdx}`));
+      setStatus(`⚠️ Slot đang giữ màu ${COLORS[holdingSlot.color].name}, không thể nhận màu khác!`);
+    }
+
+    async function onSlotClick() {
+      if (isAnimating || !holdingSlot || holdingSlot.count === 0) return;
+
+      const { color, count } = holdingSlot;
+      const match = findTargetColForSlot(color);
+      if (!match) {
+        triggerShake(document.getElementById('slot-box'));
+        setStatus(`⚠️ Chưa có cột nào trùng màu ${COLORS[color].name} hoặc cột trống!`);
+        return;
+      }
+
+      history.push(cloneState());
+      isAnimating = true;
+      holdingSlot = null;
+      for (let i = 0; i < count; i++) {
+        columns[match.targetIdx].push(color);
+      }
+      setStatus(`🔼 Đẩy ${count} lá ${COLORS[color].name} từ Slot lên Cột ${match.targetIdx + 1}.`);
+      await checkAndClearBatch(match.targetIdx);
+      isAnimating = false;
+      render();
+    }
+
+    function undoMove() {
+      if (history.length === 0 || isAnimating) return;
+      const prev = history.pop();
+      pixelGrid = prev.pixelGrid;
+      columns = prev.columns;
+      holdingSlot = prev.holdingSlot;
+      setStatus('Đã quay lại 1 bước (Undo).');
+      render();
+    }
+
+    function resetGame() {
+      if (isAnimating) return;
+      pixelGrid = INITIAL_CANVAS_10X10.map(row => row.split(''));
+      columns = [[], [], [], [], []];
+      holdingSlot = null;
+      history = [];
+      isAnimating = false;
+      for (let c = 0; c < 5; c++) {
+        refillColumnFromCanvas(c, true);
+      }
+      setStatus('Rút bài ở 5 cột dưới · Pixel từ tranh trên tự động rơi xuống!');
+      render();
+    }
+
+    resetGame();
+  </script>
+</body>
+</html>

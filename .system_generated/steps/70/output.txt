@@ -1,0 +1,18 @@
+Command exited with code 1.
+
+Command output:
+At line:132 char:71
++ ... button id=\"btn-undo\" class=\"icon-btn\" onclick=\"undoMove()\" titl ...
++                                                                  ~
+An expression was expected after '('.
+At line:133 char:57
++         <button class=\"icon-btn\" onclick=\"resetLevel()\" title=\"C ...
++                                                         ~
+An expression was expected after '('.
+At line:143 char:65
++ ...      <button class=\"icon-btn next-btn\" onclick=\"nextLevel()\" titl ...
++                                                                  ~
+An expression was expected after '('.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+ 

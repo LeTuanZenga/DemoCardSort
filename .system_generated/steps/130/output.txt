@@ -1,0 +1,23 @@
+Command exited with code 1.
+
+Command output:
+Traceback (most recent call last):
+  File "C:\Users\Admin\.gemini\antigravity\brain\0ca39d47-bf1d-4d04-97dc-9c2fe64cb8c8\generate_pixel_art_8x20.py", line 99, in <module>
+    draw_card(col_x, card_y, color_key, is_bottom=is_bottom)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\.gemini\antigravity\brain\0ca39d47-bf1d-4d04-97dc-9c2fe64cb8c8\generate_pixel_art_8x20.py", line 85, in draw_card
+    draw.rounded_rectangle(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        [col_x, card_y, col_x + CARD_W, card_y + CARD_H],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        radius=6, fill=c['fill'], outline=c['border'], width=1.5
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PIL\ImageDraw.py", line 499, in rounded_rectangle
+    draw_corners(False)
+    ~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PIL\ImageDraw.py", line 475, in draw_corners
+    self.draw.draw_arc(*(part + (ink, width)))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer

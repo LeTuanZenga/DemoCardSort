@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Total cards: 160 { B: 28, R: 48, W: 16, S: 28, D: 4, G: 22, Y: 14 }
